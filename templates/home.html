@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Algerian Forest Fire - FWI Prediction</title>
+</head>
+
+<body>
+
+    <h1>FWI Prediction (Algerian Forest Fire Dataset)</h1>
+
+    <form action="/predict" method="post">
+
+        <label>Temperature</label><br>
+        <input type="number" step="any" name="Temperature" required><br><br>
+
+        <label>Relative Humidity (RH)</label><br>
+        <input type="number" step="any" name="RH" required><br><br>
+
+        <label>Wind Speed (Ws)</label><br>
+        <input type="number" step="any" name="Ws" required><br><br>
+
+        <label>Rain</label><br>
+        <input type="number" step="any" name="Rain" required><br><br>
+
+        <label>FFMC</label><br>
+        <input type="number" step="any" name="FFMC" required><br><br>
+
+        <label>DMC</label><br>
+        <input type="number" step="any" name="DMC" required><br><br>
+
+
+        <label>ISI</label><br>
+        <input type="number" step="any" name="ISI" required><br><br>
+
+        <label>Classes (0/1)</label><br>
+    <input type="number" name="Classes" min="0" max="1" required><br><br>
+
+    <label>Region (0/1)</label><br>
+    <input type="number" name="Region" min="0" max="1" required><br><br>
+
+        <button type="submit">Predict FWI</button>
+
+    </form>
+
+    <h2>The predicted FWI is: {{ prediction }}</h2>
+
+</body>
+</html>
